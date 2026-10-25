@@ -7,9 +7,9 @@ function centerBox(...kids) {
 }
 
 function showSetup() {
-  document.title = "Configurazione iniziale · Gestionale Casa Vacanze";
+  document.title = "Configurazione iniziale · HolidayGest";
   document.body.classList.add("login"); fotoSfondo();
-  centerBox(h("h1", {}, "Benvenuto nel gestionale della casa vacanze"),
+  centerBox(h("h1", {}, "Benvenuto in HolidayGest"),
     h("p", {}, "Il programma funziona solo su questo computer, senza collegamenti a Booking o ad altri portali."),
     h("div", { class: "panel" }, h("h2", {}, "Prima installazione"),
       h("p", { class: "small" }, "Crea la password di accesso. Verrà mostrato anche un codice di recupero da conservare."),
@@ -56,7 +56,7 @@ async function setupStructure() {
 }
 
 function showLogin() {
-  document.title = "Accesso · Gestionale Casa Vacanze";
+  document.title = "Accesso · HolidayGest";
   const f = h("div", {}, field("Nome utente", "username", { value: "proprietaria" }), field("Password", "password", { type: "password" }));
   const go = async () => {
     try { const r = await api("POST", "/api/login", formData(f)); S.csrf = r.csrf; start(); } catch (e) { showError(e, f); }
@@ -93,7 +93,7 @@ async function start() {
   if (!S.status.logged_in) { showLogin(); return; }
   S.csrf = S.status.csrf;
   document.body.classList.remove("login");
-  $("#brand-name").textContent = S.status.structure_name || "Casa vacanze";
+  $("#brand-name").textContent = S.status.structure_name || "HolidayGest";
   $("#side").hidden = false;
   render();
 }

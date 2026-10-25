@@ -249,6 +249,6 @@ async function render() {
 function page(main, title, sub, actions) {
   main.replaceChildren(h("div", { class: "pagehead" }, h("h1", {}, title), sub ? h("span", { class: "sub" }, sub) : null,
     actions ? h("div", { class: "actions" }, actions) : null));
-  document.title = title + " · Gestionale Casa Vacanze";
+  document.title = title + " · HolidayGest";
   return main;
 }

@@ -12,9 +12,9 @@ Passi eseguiti dallo script:
 3. PyInstaller con `build/gestionale.spec` (cartella autosufficiente `AvviaGestionale\`, eseguibile senza console,
    icona e informazioni di versione; inclusi interfaccia, tabelle ufficiali, regole, schema XSD interno, modelli
    OCR ONNX, `tzdata`);
-4. composizione di `C:\gcb\consegna\Gestionale Casa Vacanze\` con `Guida rapida.html`, `LEGGIMI.txt` e `licenze\`;
+4. composizione di `C:\gcb\consegna\HolidayGest\` con `Guida rapida.html`, `LEGGIMI.txt` e `licenze\`;
 5. controlli di pulizia: nessun database, backup, log, lock o registro nel pacchetto; modelli OCR presenti;
-6. ZIP `GestionaleCasaVacanze_<versione>.zip` e `SHA256.txt`.
+6. ZIP `HolidayGest_<versione>.zip` e `SHA256.txt`.
 
 Usare un percorso di lavoro breve: alcune librerie superano il limite di 260 caratteri dei percorsi Windows.
 

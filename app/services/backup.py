@@ -161,7 +161,7 @@ def copy_external(conn: sqlite3.Connection, target_dir: str) -> Path:
         raise AppError("Cartella di destinazione non trovata. Se è una chiavetta, controllare che sia inserita "
                        "e la lettera dell'unità.")
     src = create_local(conn, "copia")
-    dst_dir = tdir / "Backup Gestionale Casa Vacanze"
+    dst_dir = tdir / "Backup HolidayGest"
     try:
         dst_dir.mkdir(exist_ok=True)
         dst = dst_dir / src.name

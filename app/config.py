@@ -10,8 +10,8 @@ import sys
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-APP_NAME = "Gestionale Casa Vacanze"
-APP_ID = "GestionaleCasaVacanze"
+APP_NAME = "HolidayGest"
+APP_ID = "HolidayGest"
 VERSION = "0.2.7"
 TZ = ZoneInfo("Europe/Rome")
 # Impostata solo dal lanciatore di prova strumenti/simulazione/avvia_simulato.py (orologio spostato): mai nella consegna
@@ -55,7 +55,7 @@ def data_dir() -> Path:
     """Cartella dati.
 
     Ordine: variabile GESTIONALE_DATA_DIR (test/sviluppo) -> modalità portatile
-    (file flag accanto all'eseguibile) -> %LOCALAPPDATA%\\GestionaleCasaVacanze.
+    (file flag accanto all'eseguibile) -> %LOCALAPPDATA%\\HolidayGest.
     %LOCALAPPDATA% non è sincronizzata da OneDrive per impostazione predefinita.
     """
     env = os.environ.get("GESTIONALE_DATA_DIR")

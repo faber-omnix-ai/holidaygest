@@ -1,4 +1,6 @@
-# Gestionale Casa Vacanze
+# HolidayGest
+
+**Il gestionale locale per la tua casa vacanze.**
 
 Gestionale **locale** per chi affitta **un appartamento** per vacanze in Italia (locazione turistica / casa vacanze).
 Funziona su un solo PC Windows, senza cloud e senza collegamenti a Booking o ad altri portali commerciali.
@@ -35,7 +37,7 @@ Funziona su un solo PC Windows, senza cloud e senza collegamenti a Booking o ad 
    profilo Alloggiati, codice e posti ROSS 1000. La pagina *Oggi* elenca ciò che manca.
 4. In *Imposta → Regole* creare o verificare la regola del proprio Comune e approvarla.
 
-Guida: `docs/guida/Guida_rapida.html`. I dati stanno in `%LOCALAPPDATA%\GestionaleCasaVacanze`, separati dal
+Guida: `docs/guida/Guida_rapida.html`. I dati stanno in `%LOCALAPPDATA%\HolidayGest`, separati dal
 programma (oppure accanto al programma in modalità portatile, con il file `MODALITA_PORTATILE.txt`).
 
 ## Sviluppo

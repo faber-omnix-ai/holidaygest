@@ -1,6 +1,6 @@
-GESTIONALE CASA VACANZE — come iniziare
+HOLIDAYGEST — come iniziare
 
-1. Copia l'intera cartella "Gestionale Casa Vacanze" sul computer, per esempio
+1. Copia l'intera cartella "HolidayGest" sul computer, per esempio
    in Documenti. Copiala tutta: l'eseguibile da solo non funziona.
 2. Apri la cartella copiata e fai doppio clic su "AvviaGestionale.exe".
    Si apre una piccola finestra di controllo e il gestionale nel browser.
@@ -15,7 +15,7 @@ GESTIONALE CASA VACANZE — come iniziare
    cosa manca.
 
 I dati NON sono nella cartella del programma: sono in
-   %LOCALAPPDATA%\GestionaleCasaVacanze
+   %LOCALAPPDATA%\HolidayGest
 (il percorso esatto è mostrato nella finestra di controllo e in Impostazioni).
 Per aggiornare il programma basta sostituire questa cartella: i dati restano.
 

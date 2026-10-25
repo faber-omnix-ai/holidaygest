@@ -111,7 +111,7 @@ async function drawCalendar(main) {
   const occ = await api("GET", `/api/calendar?from=${monthStart}&to=${monthEnd}`).then(r => r.occupancy);
   const byDay = Object.fromEntries(data.days.map(d => [d.date, d]));
   const bmap = Object.fromEntries(data.bookings.map(b => [b.id, b]));
-  document.title = "Calendario · Gestionale Casa Vacanze";
+  document.title = "Calendario · HolidayGest";
   const go = (dm) => { CAL.m += dm; if (CAL.m < 0) { CAL.m = 11; CAL.y--; } if (CAL.m > 11) { CAL.m = 0; CAL.y++; } CAL.sel = null; drawCalendar(main); };
   main.replaceChildren(
     h("div", { class: "cal-head" },

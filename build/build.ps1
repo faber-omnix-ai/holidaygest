@@ -3,7 +3,7 @@ Build riproducibile del pacchetto Windows.
 Requisiti SOLO sul PC dello sviluppatore: Windows x64, Python 3.14 (launcher "py").
 Uso:  pwsh -File build\build.ps1  [-Lavoro C:\gcb]  [-SaltaTest]
 Usa un percorso di lavoro breve: alcune librerie superano il limite di 260 caratteri di Windows.
-Risultato: <Lavoro>\consegna\Gestionale Casa Vacanze\  e  <Lavoro>\consegna\GestionaleCasaVacanze_<versione>.zip
+Risultato: <Lavoro>\consegna\HolidayGest\  e  <Lavoro>\consegna\HolidayGest_<versione>.zip
 #>
 param([string]$Lavoro = "$env:TEMP\gcb", [switch]$SaltaTest)
 $ErrorActionPreference = "Stop"
@@ -28,7 +28,7 @@ if ($LASTEXITCODE) { throw "PyInstaller non riuscito." }
 
 Write-Host "== 4. Composizione della consegna"
 $Cons = Join-Path $Lavoro "consegna"
-$Dest = Join-Path $Cons "Gestionale Casa Vacanze"
+$Dest = Join-Path $Cons "HolidayGest"
 if (Test-Path $Cons) { Remove-Item -Recurse -Force $Cons }
 New-Item -ItemType Directory -Force $Dest | Out-Null
 Copy-Item -Recurse "$Lavoro\dist\AvviaGestionale\*" $Dest
@@ -46,7 +46,7 @@ if ($modelli.Count -lt 3) { throw "Modelli OCR mancanti nel pacchetto." }
 if (-not (Test-Path (Join-Path $Dest "AvviaGestionale.exe"))) { throw "Eseguibile mancante." }
 
 Write-Host "== 6. Archivio ZIP"
-$Zip = Join-Path $Cons "GestionaleCasaVacanze_$Versione.zip"
+$Zip = Join-Path $Cons "HolidayGest_$Versione.zip"
 Compress-Archive -Path $Dest -DestinationPath $Zip -CompressionLevel Optimal
 $hash = (Get-FileHash $Zip -Algorithm SHA256).Hash
 "$hash  $(Split-Path -Leaf $Zip)" | Set-Content (Join-Path $Cons "SHA256.txt")
