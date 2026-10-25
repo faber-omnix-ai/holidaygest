@@ -71,6 +71,15 @@ Nessun dato di ospiti nel repository, nei test o nei log: i test usano solo dati
 deve mai allegare file reali (schedine, XML, documenti, database): per segnalare un problema sui file usare
 `build/verifica_tracciati.py --anonimo`, che riporta solo la forma, mai i valori.
 
-## Licenza
-GPL-3.0-or-later (vedi `LICENSE`). Le librerie incluse nel pacchetto mantengono le proprie licenze (cartella
-`licenze` del pacchetto).
+## Copyright e licenza
+Copyright © 2026 Fabrizio Frigau.
+
+HolidayGest è software libero: puoi usarlo, studiarlo, modificarlo e ridistribuirlo, anche a pagamento,
+alle condizioni della GNU General Public License versione 3 o successiva (GPL-3.0-or-later, vedi
+`LICENSE`). Chi distribuisce il programma, originale o modificato, deve mantenere questa nota di
+copyright e il nome dell'autore, indicare le modifiche fatte e rendere disponibile il codice sorgente
+con la stessa licenza.
+
+Le librerie incluse nel pacchetto mantengono le proprie licenze (cartella `licenze` del pacchetto).
+Il nome «HolidayGest» identifica questo progetto: le versioni modificate dovrebbero usare un nome diverso per non
+confondersi con l'originale.
