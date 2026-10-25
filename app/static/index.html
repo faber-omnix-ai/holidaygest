@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestionale Casa Vacanze</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="bgphoto" aria-hidden="true"></div>
+<a class="skip" href="#main">Vai al contenuto</a>
+<div id="app">
+  <aside id="side" hidden>
+    <div class="brand"><span class="mark" aria-hidden="true"></span><div><strong id="brand-name">Casa vacanze</strong><small>gestionale locale</small></div></div>
+    <nav aria-label="Sezioni">
+      <a href="#/oggi" data-nav="oggi">Oggi</a>
+      <a href="#/calendario" data-nav="calendario">Calendario</a>
+      <a href="#/prenotazioni" data-nav="prenotazioni">Prenotazioni e soggiorni</a>
+      <a href="#/documenti" data-nav="documenti">Verifica documenti</a>
+      <a href="#/esportazioni" data-nav="esportazioni">Esportazioni ed esiti</a>
+      <a href="#/imposta" data-nav="imposta">Imposta e rendiconti</a>
+      <a href="#/manutenzione" data-nav="manutenzione">Manutenzione</a>
+      <a href="#/impostazioni" data-nav="impostazioni">Impostazioni e backup</a>
+    </nav>
+    <div class="side-foot">
+      <p class="muted small">Calendario interno: non è collegato a Booking o ad altri portali.</p>
+      <button type="button" class="link" id="btn-logout">Esci</button>
+    </div>
+  </aside>
+  <div id="col">
+    <main id="main" tabindex="-1"></main>
+    <footer class="site-foot">
+      <img src="assets/brand/candeliere-sassari.png" width="38" height="38" alt="Candeliere di Sassari - simbolo personale di Fabrizio Faber Frigau">
+      <div>
+        <p><span id="foot-app"></span> <span id="foot-ver"></span> - edizione locale © 2026</p>
+        <p>Generato da Fabrizio "Faber" Frigau 🔥</p>
+      </div>
+    </footer>
+  </div>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<dialog id="dlg"><form method="dialog" id="dlg-form"></form></dialog>
+<script src="core.js"></script>
+<script src="views_today_calendar.js"></script>
+<script src="views_booking.js"></script>
+<script src="views_docs_exports.js"></script>
+<script src="views_tax_settings.js"></script>
+<script src="views_maintenance.js"></script>
+<script src="boot.js"></script>
+</body>
+</html>

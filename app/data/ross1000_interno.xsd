@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Schema INTERNO, NON UFFICIALE, ricavato dal documento GIES "Tracciato record di integrazione
+  dati (XML)" versione 3 del 18/03/2026. Serve solo come controllo strutturale locale:
+  la validazione con lo schema ufficiale (se pubblicato) e l'accettazione del portale restano
+  verifiche distinte.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:simpleType name="data8"><xs:restriction base="xs:string"><xs:pattern value="\d{8}"/></xs:restriction></xs:simpleType>
+  <xs:simpleType name="id20"><xs:restriction base="xs:string"><xs:minLength value="1"/><xs:maxLength value="20"/></xs:restriction></xs:simpleType>
+  <xs:simpleType name="tipo"><xs:restriction base="xs:string"><xs:enumeration value="16"/><xs:enumeration value="17"/><xs:enumeration value="18"/><xs:enumeration value="19"/><xs:enumeration value="20"/></xs:restriction></xs:simpleType>
+  <xs:simpleType name="tipoElim"><xs:restriction base="xs:string"><xs:pattern value="16|17|18|19|20|99"/></xs:restriction></xs:simpleType>
+  <xs:simpleType name="codice9"><xs:restriction base="xs:string"><xs:pattern value="\d{9}"/></xs:restriction></xs:simpleType>
+  <xs:simpleType name="codice9opz"><xs:restriction base="xs:string"><xs:pattern value="(\d{9})?"/></xs:restriction></xs:simpleType>
+  <xs:simpleType name="sino"><xs:restriction base="xs:string"><xs:enumeration value="SI"/><xs:enumeration value="NO"/></xs:restriction></xs:simpleType>
+  <xs:simpleType name="testo30"><xs:restriction base="xs:string"><xs:maxLength value="30"/></xs:restriction></xs:simpleType>
+  <xs:simpleType name="testo50"><xs:restriction base="xs:string"><xs:maxLength value="50"/></xs:restriction></xs:simpleType>
+  <xs:simpleType name="nonvuoto"><xs:restriction base="xs:string"><xs:minLength value="1"/></xs:restriction></xs:simpleType>
+
+  <xs:element name="movimenti">
+    <xs:complexType><xs:sequence>
+      <xs:element name="codice" type="nonvuoto"/>
+      <xs:element name="prodotto" type="nonvuoto"/>
+      <xs:element name="movimento" maxOccurs="unbounded">
+        <xs:complexType><xs:sequence>
+          <xs:element name="data" type="data8"/>
+          <xs:element name="struttura">
+            <xs:complexType><xs:sequence>
+              <xs:element name="apertura" type="sino"/>
+              <xs:element name="camereoccupate" type="xs:nonNegativeInteger"/>
+              <xs:element name="cameredisponibili" type="xs:nonNegativeInteger"/>
+              <xs:element name="lettidisponibili" type="xs:nonNegativeInteger"/>
+            </xs:sequence></xs:complexType>
+          </xs:element>
+          <xs:element name="arrivi" minOccurs="0">
+            <xs:complexType><xs:sequence>
+              <xs:element name="arrivo" maxOccurs="unbounded">
+                <xs:complexType><xs:sequence>
+                  <xs:element name="idswh" type="id20"/>
+                  <xs:element name="tipoalloggiato" type="tipo"/>
+                  <xs:element name="idcapo" type="xs:string"/>
+                  <xs:element name="cognome" type="testo50" minOccurs="0"/>
+                  <xs:element name="nome" type="testo30" minOccurs="0"/>
+                  <xs:element name="sesso"><xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value="M"/><xs:enumeration value="F"/></xs:restriction></xs:simpleType></xs:element>
+                  <xs:element name="cittadinanza" type="codice9"/>
+                  <xs:element name="statoresidenza" type="codice9"/>
+                  <xs:element name="luogoresidenza" type="testo30"/>
+                  <xs:element name="datanascita" type="data8"/>
+                  <xs:element name="statonascita" type="codice9opz"/>
+                  <xs:element name="comunenascita" type="codice9opz"/>
+                  <xs:element name="tipoturismo" type="nonvuoto" minOccurs="0"/>
+                  <xs:element name="mezzotrasporto" type="nonvuoto" minOccurs="0"/>
+                  <xs:element name="canaleprenotazione" type="xs:string" minOccurs="0"/>
+                  <xs:element name="titolostudio" type="xs:string" minOccurs="0"/>
+                  <xs:element name="professione" type="xs:string" minOccurs="0"/>
+                  <xs:element name="esenzioneimposta" type="xs:string" minOccurs="0"/>
+                </xs:sequence></xs:complexType>
+              </xs:element>
+            </xs:sequence></xs:complexType>
+          </xs:element>
+          <xs:element name="partenze" minOccurs="0">
+            <xs:complexType><xs:sequence>
+              <xs:element name="partenza" maxOccurs="unbounded">
+                <xs:complexType><xs:sequence>
+                  <xs:element name="idswh" type="id20"/>
+                  <xs:element name="tipoalloggiato" type="tipo"/>
+                  <xs:element name="arrivo" type="data8"/>
+                </xs:sequence></xs:complexType>
+              </xs:element>
+            </xs:sequence></xs:complexType>
+          </xs:element>
+          <xs:element name="prenotazioni" minOccurs="0">
+            <xs:complexType><xs:sequence>
+              <xs:element name="prenotazione" maxOccurs="unbounded">
+                <xs:complexType><xs:sequence>
+                  <xs:element name="idswh" type="id20"/>
+                  <xs:element name="arrivo" type="data8"/>
+                  <xs:element name="partenza" type="data8"/>
+                  <xs:element name="ospiti" type="xs:positiveInteger"/>
+                  <xs:element name="camere" type="xs:positiveInteger"/>
+                  <xs:element name="prezzo" type="xs:string"/>
+                  <xs:element name="canaleprenotazione" type="xs:string"/>
+                  <xs:element name="statoprovenienza" type="codice9opz"/>
+                  <xs:element name="comuneprovenienza" type="testo30"/>
+                </xs:sequence></xs:complexType>
+              </xs:element>
+            </xs:sequence></xs:complexType>
+          </xs:element>
+          <xs:element name="rettifiche" minOccurs="0">
+            <xs:complexType><xs:sequence>
+              <xs:element name="eliminazione" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType><xs:sequence>
+                  <xs:element name="idswh" type="id20"/>
+                  <xs:element name="tipoalloggiato" type="tipoElim"/>
+                  <xs:element name="arrivo" type="data8"/>
+                </xs:sequence></xs:complexType>
+              </xs:element>
+            </xs:sequence></xs:complexType>
+          </xs:element>
+        </xs:sequence></xs:complexType>
+      </xs:element>
+    </xs:sequence></xs:complexType>
+  </xs:element>
+</xs:schema>

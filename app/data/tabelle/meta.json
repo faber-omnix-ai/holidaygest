@@ -1,0 +1,24 @@
+{
+  "fonte": "https://alloggiatiweb.poliziadistato.it/PortaleAlloggiati/Tabelle.aspx",
+  "scaricato_il": "2026-10-13",
+  "nota": "Tabelle ufficiali Polizia di Stato (Alloggiati Web), usate anche da ROSS 1000 per tipo alloggiato, comuni e stati. Aggiornabili da Impostazioni > Tabelle.",
+  "file": {
+    "stati.csv": {
+      "sha256": "77f4bb0b0df6bcf10385b9b8892d876a6023c2da40abea72c569b2beb205ced4",
+      "righe": 236
+    },
+    "documenti.csv": {
+      "sha256": "b411088e0c5baf01c16cd64ca32c427258dde74eb9cdf13455dff904e1a00663",
+      "righe": 95
+    },
+    "tipo_alloggiato.csv": {
+      "sha256": "3cf46914cf9806e9b0d2307c27bfcf67f849de1432c65ff7e8603cd74b69f4cd",
+      "righe": 5
+    },
+    "comuni.csv": {
+      "sha256": "a9d0f21fc5511b3e05bca881914251ee18c1310a2351abc636bae432f47b6454",
+      "righe": 11294
+    }
+  },
+  "confronto": "2026-10-14: confrontate con la copia delle tabelle fornita dalla committente (comuni, documenti, stati, tipo_alloggiato): SHA-256 identici."
+}

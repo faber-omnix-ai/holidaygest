@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guida rapida · Gestionale Casa Vacanze</title>
+<style>
+ body { font: 16px/1.55 "Segoe UI", system-ui, sans-serif; color: #1d2a2e; background: #f5f2ec; margin: 0; }
+ main { max-width: 820px; margin: 0 auto; padding: 24px 20px 60px; background: #fffdf9; }
+ h1 { font-size: 24px; color: #0e4f5c; } h2 { font-size: 19px; margin-top: 30px; border-bottom: 2px solid #e8dfd1; padding-bottom: 4px; }
+ .box { background: #fbf0d6; border-left: 4px solid #8a5a00; padding: 8px 12px; margin: 12px 0; }
+ .ok { background: #e1f0e3; border-left-color: #2f6b3a; }
+ ol li, ul li { margin: 4px 0; } code { background: #f1eee8; padding: 1px 4px; border-radius: 3px; }
+</style>
+</head>
+<body><main>
+<h1>Gestionale Casa Vacanze — guida rapida</h1>
+<p>Il programma lavora solo su questo computer. Il calendario è interno: <strong>non aggiorna Booking né altri annunci</strong>.
+I file per Alloggiati Web e ROSS 1000 si caricano a mano sui portali.</p>
+
+<h2>1. Avvio</h2>
+<ol>
+ <li>Doppio clic su <code>AvviaGestionale.exe</code>. Si apre la finestra di controllo e il gestionale nel browser.</li>
+ <li>Se il browser non si apre, nella finestra di controllo premi <em>Apri il gestionale</em>.</li>
+ <li>Per chiudere usa <em>Chiudi il gestionale</em>: viene fatto un backup automatico.</li>
+ <li>Il gestionale funziona anche senza Internet. Internet serve solo per usare i portali (Alloggiati, ROSS, Comune).</li>
+</ol>
+
+<h2>2. La giornata: schermata «Oggi»</h2>
+<p>Risponde a: chi arriva e chi parte, se l'appartamento è pronto, quali dati mancano, quali comunicazioni fare,
+quanto incassare, scadenze e backup. Ogni avviso è un collegamento alla pratica da sistemare.</p>
+<div class="box">I promemoria compaiono solo quando il programma è aperto: a PC spento non arrivano notifiche.</div>
+
+<h2>3. Prenotare dal calendario</h2>
+<ol>
+ <li>Apri <em>Calendario</em>, fai clic sul giorno di arrivo e poi sul giorno di partenza.</li>
+ <li>Bastano referente, contatto, periodo, numero di persone e stato (confermata, opzione con scadenza, bozza).
+  I documenti non servono per prenotare.</li>
+ <li>Prezzo: totale concordato oppure prezzo per notte; extra e sconti si aggiungono nella scheda. L'imposta di soggiorno è sempre separata.</li>
+ <li>Per spostare una prenotazione trascinala su un altro giorno: prima di salvare vedi le conseguenze (notti, prezzo, imposta, file già generati).</li>
+ <li><em>Blocca periodo</em> serve per manutenzione o uso personale: non crea ospiti né comunicazioni.</li>
+</ol>
+<p>Colori ed etichette: Disponibile · In opzione · Prenotato · Soggiorno in corso · Concluso · Bloccato. Una prenotazione futura non è un ospite arrivato.</p>
+
+<h2>4. Ospiti: a mano o da documento</h2>
+<ul>
+ <li>Nella scheda della prenotazione, scheda <em>Ospiti</em>: <em>Aggiungi ospite (inserimento manuale)</em> funziona sempre.</li>
+ <li><em>Aggiungi ospite da documento</em>: carica foto (JPG/PNG) o PDF di fronte e retro, ruota/ingrandisci, premi <em>Leggi i dati</em>.
+   Ogni campo è marcato <em>letto</em>, <em>dubbio</em>, <em>mancante</em> o <em>corretto</em>: controllalo sempre sul documento originale.</li>
+ <li>Le immagini restano solo in memoria e vengono cancellate a fine verifica. Le foto sul telefono o nei Download vanno eliminate da te.</li>
+ <li>Dal fronte di carta d'identità e patente il programma <em>propone</em> anche comune di nascita, tipo, numero e luogo di rilascio: sono sempre <em>dubbi</em> finché non li controlli. Solo le righe in fondo ai documenti (zona MRZ) possono risultare <em>letti</em>.</li>
+ <li>Comune, Stato, cittadinanza e tipo di documento si scelgono dagli elenchi ufficiali (scrivi le prime lettere).</li>
+ <li>Se modifichi un ospite già inserito, prima del salvataggio vedi le conseguenze (imposta, file già generati, rettifiche): premi <em>Conferma e salva</em> per procedere. Se cambi dati anagrafici, la spunta di verifica va rimessa.</li>
+ <li>Familiari e componenti di gruppo vanno collegati al proprio capofamiglia/capogruppo.</li>
+ <li>Spunta <em>Ho verificato questi dati</em> solo dopo il controllo: senza verifica l'ospite non entra nei file.</li>
+</ul>
+
+<h2>5. Arrivo e partenza</h2>
+<ol>
+ <li><em>Registra arrivo</em>: spunta solo chi è arrivato davvero, con data e ora (servono per il termine Alloggiati).</li>
+ <li>Chi arriva o parte in un altro giorno si gestisce singolarmente dalla tabella ospiti.</li>
+ <li><em>Registra partenza</em> mostra un riepilogo: soldi da incassare, imposta, comunicazioni aperte. Si può registrare anche con un saldo aperto: resta visibile in Oggi.</li>
+ <li>Il no-show si registra solo a mano: il programma non lo decide mai da solo.</li>
+</ol>
+
+<h2>6. Imposta di soggiorno</h2>
+<ul>
+ <li>Scheda <em>Imposta</em> della prenotazione: totale e dettaglio per ospite e per notte, con il motivo di ogni esclusione
+   (residente, minore, oltre le 7 notti, esenzioni).</li>
+ <li>Prima dell'arrivo è una <strong>stima</strong>; dopo l'arrivo usa le permanenze effettive.</li>
+ <li><strong>DA VERIFICARE</strong> significa che manca una regola approvata o che c'è un dubbio (es. data di nascita mancante o soglia d'età impostata «da chiarire»). Non viene mai trasformato in zero.</li>
+ <li>Per le esenzioni registra solo che la dichiarazione è stata acquisita: niente diagnosi.</li>
+ <li>A soggiorno concluso <em>Consolida conteggio</em>; poi <em>Emetti quietanza</em> per l'imposta realmente incassata.</li>
+ <li>Il rifiuto di pagare si annota, ma l'imposta resta dovuta.</li>
+</ul>
+<div class="box">Le regole si gestiscono in <em>Imposta e rendiconti → Regole imposta</em>. Il programma include come <strong>esempio da verificare</strong> la regola 2026 del Comune di Alghero (2,00 € a notte, massimo 7 notti, esenti sotto i 12 anni). Per il tuo Comune crea una nuova regola con tariffa, limite di notti, soglia dei minori, esenzioni e fonte (delibera, regolamento), indica lo stesso nome del Comune in <em>Impostazioni → Struttura</em> e approvala. Per ogni anno nuovo serve una nuova regola verificata: da dicembre il programma lo ricorda in Oggi.</div>
+
+<h2>7. Incassi</h2>
+<ul>
+ <li><em>Pagamenti → Registra incasso</em>: data, importo, modalità, causale e <strong>ripartizione</strong> fra soggiorno, imposta e cauzione
+   (es. 612 € = 500 soggiorno + 12 imposta + 100 cauzione). La somma deve coincidere.</li>
+ <li>Restituzione della cauzione e rimborsi: <em>Registra restituzione o rimborso</em>.</li>
+ <li>Un errore si corregge con <em>Storna</em> (resta traccia), poi si registra il movimento giusto.</li>
+ <li>Annullare una prenotazione non cancella acconti né quietanze.</li>
+</ul>
+
+<h2>8. File per Alloggiati Web e ROSS 1000</h2>
+<ol>
+ <li><em>Esportazioni ed esiti</em>: scegli il periodo e premi <em>Anteprima</em>: vedi chi è incluso e chi è escluso con il motivo.</li>
+ <li><em>Genera file</em> scarica il TXT (Alloggiati) o l'XML (ROSS). <strong>Scaricare il file non è una comunicazione.</strong></li>
+ <li>Caricalo sul portale (per Alloggiati usa prima <em>Elabora</em>, poi <em>Invia</em>).</li>
+ <li>Torna nel gestionale: <em>Dichiara caricato</em>, poi <em>Registra esito</em> (accettati/scartati, come indicato dal portale).</li>
+ <li>Per Alloggiati allega la <strong>ricevuta ufficiale</strong>: i dati dei documenti vengono cancellati, la ricevuta è conservata 5 anni.</li>
+ <li>Se modifichi dati già comunicati compare una <em>rettifica</em> da gestire sul portale: il programma non aggiorna i portali.</li>
+</ol>
+<div class="box"><strong>ROSS 1000 ogni giorno, entro 24 ore</strong> (in Sardegna: L.R. 16/2017 art. 21 bis; nelle altre regioni verifica termini e regole della tua Regione): arrivi e partenze, ma anche i giorni con la casa libera e disponibile (giornata «a zero») e i periodi di chiusura. Le chiusure lunghe (es. l'inverno) si segnano in una volta sola: nel gestionale da <em>Impostazioni → Tabelle, chiusure ROSS, informazioni → Registra chiusura</em>, sul portale dal calendario in «Check-in / gestione disponibilità». Puoi comunicare con il file del gestionale oppure a mano sul portale, ma <strong>mai in tutti e due i modi per gli stessi giorni</strong>.</div>
+<div class="box">Alloggiati Web è un obbligo separato: ROSS 1000 non invia da solo i dati alla Questura. Se fai il check-in sul portale ROSS, il suo «File Questura» va caricato su Alloggiati; in quel caso non caricare anche il TXT del gestionale per le stesse persone, sarebbe un doppio invio.</div>
+
+<h2>9. Fine trimestre</h2>
+<ol>
+ <li><em>Imposta e rendiconti → Controlla periodo</em>: confronta presenze, notti, imposta calcolata, incassata e versata; ogni anomalia apre la pratica.</li>
+ <li><em>Prospetto trimestrale</em>: dati da riportare a mano sul portale comunale entro il 15 del mese successivo al trimestre.</li>
+ <li>Registra il versamento (con riferimento CRO/IUV) e lo stato della comunicazione. <em>Chiudi periodo</em> salva un riepilogo numerato.</li>
+</ol>
+
+<h2>10. Backup, ripristino e cambio PC</h2>
+<ul>
+ <li>Il backup è automatico alla chiusura; in <em>Impostazioni → Backup e ripristino</em> puoi farlo subito e copiarlo su chiavetta.</li>
+ <li>La data dell'ultimo backup riuscito e gli eventuali errori sono in Oggi.</li>
+ <li>Il backup è cifrato: per aprirlo servono la password o il <strong>codice di recupero</strong>. Se li perdi entrambi i dati non sono recuperabili da nessuno.</li>
+ <li>Cambio PC: segui <em>Impostazioni → Trasferisci su un altro PC</em>. Dopo il trasferimento usa un solo PC: due copie usate in parallelo non si uniscono.</li>
+ <li>Ripristinare sostituisce l'archivio attuale solo dopo averne salvato una copia di sicurezza.</li>
+</ul>
+
+<h2>11. Manutenzione</h2>
+<ul>
+ <li>Menu <em>Manutenzione</em> → <em>Nuovo lavoro</em>: che cosa c'è da fare, priorità (urgente, normale, bassa), entro quando, ditta o tecnico, preventivo. Con <em>Aggiungi foto o PDF</em> puoi allegare subito la foto del guasto.</li>
+ <li>Nella scheda del lavoro scrivi nel <em>Diario dell'avanzamento</em> ogni passo («chiamato l'idraulico», «viene martedì»): restano data e ora.</li>
+ <li>Aggiungi foto del guasto, preventivo o fattura (JPG, PNG o PDF): sono conservati cifrati e finiscono nel backup. Una foto caricata per errore si toglie con <em>Rimuovi</em> sotto la miniatura.</li>
+ <li>Nell'elenco puoi cercare per parola (lavoro, ditta o descrizione).</li>
+ <li>Lo stato va da <em>Da fare</em> a <em>In corso</em> a <em>Risolto</em> (con il costo finale). Un lavoro che non serve più si <em>annulla</em> indicando il motivo; uno risolto che si ripresenta si <em>riapre</em>.</li>
+ <li>I lavori urgenti, scaduti o in scadenza entro 7 giorni compaiono in Oggi.</li>
+ <li><strong>Lavori periodici.</strong> Nel lavoro scegli <em>Si ripete</em> (ogni mese, 3 mesi, 6 mesi, anno, 2 anni) e la prima scadenza: es. «Pulizia filtri del condizionatore, ogni 6 mesi». Quando lo segni <em>Risolto</em> si apre da solo il prossimo, con scadenza spostata da quel giorno. Per fermare la serie annulla il prossimo intervento. Il filtro <em>Lavori periodici</em> mostra le prossime scadenze.</li>
+ <li><strong>Apparecchi della casa</strong> (scheda in alto): condizionatore, scaldabagno, lavatrice… con marca, modello, data di acquisto e <em>garanzia fino al</em>; allega manuale, scontrino e certificato di garanzia. Nella scheda vedi tutti i lavori fatti su quell'apparecchio e quanto è costato. In Oggi compare un avviso 60 giorni prima della fine della garanzia. Un apparecchio sostituito si segna come non più in uso.</li>
+ <li><strong>Ditte e tecnici</strong> (scheda in alto): nome, specialità, telefono ed e-mail. Nel lavoro scegli la ditta dall'elenco, oppure scrivi il nome di una nuova in <em>…oppure nuova ditta</em>: viene aggiunta alla rubrica. Per ogni ditta vedi i lavori e la spesa totale.</li>
+ <li>La manutenzione non blocca il calendario (per non affittare in quei giorni usa <em>Blocca periodo</em>) e i suoi costi non entrano nei conti dei soggiorni.</li>
+</ul>
+
+<h2>12. Primo avvio: cosa impostare</h2>
+<ul>
+ <li><em>Impostazioni → Struttura</em>: nome, indirizzo, CIN e IUN, tipologia dell'attività, Comune e categoria per l'imposta di soggiorno, capienza, orari di arrivo e partenza.</li>
+ <li>Alloggiati Web: tracciato del tuo profilo (168 caratteri, oppure 174 con ID appartamento).</li>
+ <li>ROSS 1000: codice struttura assegnato dall'ente, unità ricettive e letti disponibili.</li>
+ <li><em>Imposta → Regole</em>: la regola del tuo Comune, approvata dopo averne controllato la fonte.</li>
+ <li>Finché manca qualcosa, la pagina Oggi lo elenca in <em>Configurazione da completare</em>.</li>
+ <li>Anagrafiche degli ospiti proposte per l'anonimizzazione dopo 5 anni (solo su tua conferma): verifica i tempi di conservazione che valgono per te.</li>
+</ul>
+<div class="box ok">Il primo file reale per ciascun portale va controllato con la funzione di verifica del portale prima dell'invio, con dati autorizzati.</div>
+</main></body>
+</html>

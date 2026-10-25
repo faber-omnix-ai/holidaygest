@@ -1,0 +1,24 @@
+[
+  {
+    "comune": "Alghero",
+    "category": "extra_alberghiera",
+    "valid_from": "2026-01-01",
+    "valid_to": "2026-12-31",
+    "rate_cents": 200,
+    "max_nights": 7,
+    "minor_rule": "meno_di_12",
+    "exemptions": [
+      "residente",
+      "minore",
+      "assistenza_ricoverati",
+      "forze_servizio",
+      "disabilita_grave",
+      "accompagnatore"
+    ],
+    "seasonality": [],
+    "source": "Delibera G.C. Alghero n. 376 del 20/11/2025, punto 1 lett. c (2,00 euro strutture extra-alberghiere, anno 2026); Regolamento imposta di soggiorno (Allegato A, modificato con D.C.C. n. 105 del 07/11/2025) artt. 2, 3; pagina SECAL imposta di soggiorno. Nessuna riduzione stagionale indicata nella delibera 2026. Soglia minori: FAQ del Comune di Alghero sull'imposta di soggiorno (portale urbanistica.comune.alghero.ss.it, «domande frequenti»): l'esenzione «entro il dodicesimo anno di età» si applica fino a 11 anni e 364 giorni.",
+    "verified_on": "2026-10-14",
+    "status": "da_verificare",
+    "notes": "ESEMPIO incluso nel programma: regola del Comune di Alghero per il 2026, letta dagli atti ufficiali il 13-14/10/2026. Prima di approvarla verificare che sia ancora valida e che corrisponda al proprio Comune e alla propria categoria. Per un altro Comune creare una nuova regola in Imposta → Regole con le fonti del proprio regolamento. Minori: esenti fino al giorno prima del 12° compleanno secondo la FAQ del Comune di Alghero."
+  }
+]

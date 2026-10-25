@@ -1,0 +1,7 @@
+Foto facoltative della casa, usate come sfondo leggero nelle schermate.
+
+Per usarle nella propria copia del programma mettere qui fino a sei immagini JPG con questi nomi:
+casa-1.jpg (sfondo della pagina di accesso), casa-2.jpg, casa-3.jpg, casa-4.jpg, casa-5.jpg, casa-6.jpg
+e ricostruire il pacchetto. Senza foto resta uno sfondo rosato.
+
+Usare solo foto di cui si hanno i diritti.
