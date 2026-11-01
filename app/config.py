@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 
 APP_NAME = "HolidayGest"
 APP_ID = "HolidayGest"
-VERSION = "0.2.7"
+VERSION = "0.2.8"
 TZ = ZoneInfo("Europe/Rome")
 # Impostata solo dal lanciatore di prova strumenti/simulazione/avvia_simulato.py (orologio spostato): mai nella consegna
 SIMULAZIONE: str | None = None

@@ -234,6 +234,7 @@ async function render() {
   for (const r of ROUTES) {
     const m = path.match(r.rx);
     if (m) {
+      S.nav = r.nav;
       $$("nav a").forEach(a => a.classList.toggle("active", a.dataset.nav === r.nav));
       fotoSfondo();
       const main = $("#main");
@@ -246,8 +247,11 @@ async function render() {
   }
   location.hash = "#/oggi";
 }
+/* Capitolo del manuale per ogni sezione del programma */
+const AIUTO = { oggi: "oggi", calendario: "calendario", prenotazioni: "prenotazione", documenti: "ospiti", esportazioni: "comunicazioni", imposta: "imposta", manutenzione: "manutenzione", impostazioni: "backup" };
+function aiutoLink() { return AIUTO[S.nav] ? h("a", { class: "man-aiuto", href: `#/manuale?c=${AIUTO[S.nav]}` }, "Come funziona") : null; }
 function page(main, title, sub, actions) {
-  main.replaceChildren(h("div", { class: "pagehead" }, h("h1", {}, title), sub ? h("span", { class: "sub" }, sub) : null,
+  main.replaceChildren(h("div", { class: "pagehead" }, h("h1", {}, title), sub ? h("span", { class: "sub" }, sub) : null, aiutoLink(),
     actions ? h("div", { class: "actions" }, actions) : null));
   document.title = title + " · HolidayGest";
   return main;

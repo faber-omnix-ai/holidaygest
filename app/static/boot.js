@@ -68,6 +68,7 @@ function showLogin() {
       h("p", {}, S.status && S.status.structure_name || "Gestionale")), h("div", { class: "panel" }, h("h2", {}, "Accesso"), f,
     h("div", { class: "row", style: "margin-top:10px" }, h("button", { type: "button", class: "primary", onclick: go }, "Entra"), h("span", { class: "spacer" }),
       h("button", { type: "button", class: "link", onclick: showRecover }, "Ho dimenticato la password"))),
+    h("p", { class: "small muted" }, h("button", { type: "button", class: "link", onclick: () => manuale($("#main"), "avvio", showLogin) }, "Apri il manuale di istruzioni")),
     h("p", { class: "small muted" }, `Dati in: ${S.status ? S.status.data_dir : ""}`));
   setTimeout(() => $("input[name=password]").focus(), 30);
 }

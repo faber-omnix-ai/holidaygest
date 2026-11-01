@@ -14,6 +14,7 @@ Funziona su un solo PC Windows, senza cloud e senza collegamenti a Booking o ad 
 - Incassi, caparre, cauzioni e storni con ripartizione soggiorno / imposta / cauzione.
 - **Manutenzione**: lavori da fare / in corso / risolti, lavori periodici, apparecchi con garanzie e manuali,
   rubrica di ditte e tecnici, foto e PDF.
+- **Manuale di istruzioni** dentro il programma, con ricerca, glossario e schermate di esempio.
 - Archivio cifrato con password e codice di recupero, backup cifrati, conservazione e anonimizzazione dei dati.
 
 > **Avvertenza.** Il programma prepara file e calcoli, ma **non sostituisce le verifiche dell'utente**: i file vanno

@@ -121,6 +121,7 @@ async function drawCalendar(main) {
       h("button", { type: "button", onclick: () => { const t = todayIso(); CAL.y = +t.slice(0, 4); CAL.m = +t.slice(5, 7) - 1; drawCalendar(main); } }, "Oggi"),
       h("input", { type: "month", value: monthStart.slice(0, 7), style: "width:auto", "aria-label": "Vai al mese",
         onchange: (e) => { if (e.target.value) { CAL.y = +e.target.value.slice(0, 4); CAL.m = +e.target.value.slice(5, 7) - 1; drawCalendar(main); } } }),
+      aiutoLink(),
       h("span", { class: "spacer" }),
       h("button", { type: "button", onclick: () => blockDialog(() => drawCalendar(main)) }, "Blocca periodo"),
       h("button", { type: "button", class: "primary", onclick: () => bookingDialog({}, () => drawCalendar(main)) }, "Nuova prenotazione")),

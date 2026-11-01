@@ -214,7 +214,39 @@ details > summary { cursor: pointer; color: var(--sea); }
   .viewer { position: static; }
   .day { min-height: 70px; }
 }
-@media print { #side, .actions, button, .site-foot, #bgphoto, .hero { display: none !important; } main { padding: 0; } }
+/* Manuale: stessi pannelli e colori dell'app, sopra la foto della casa in trasparenza */
+.man-aiuto { font-size: 13px; }
+.man-strumenti { margin: 14px 0; }
+.man-strumenti input { flex: 1; min-width: 220px; width: auto; }
+.man-griglia { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 16px; align-items: start; }
+.man-indice { position: sticky; top: 12px; background: #fffdfcf2; border: 1px solid var(--line); border-radius: 14px; padding: 8px 12px 12px; box-shadow: var(--shadow); max-height: calc(100vh - 24px); overflow-y: auto; }
+.man-indice h3 { margin: 12px 0 4px; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.man-indice button { display: block; width: 100%; text-align: left; padding: 5px 8px; border-radius: 8px; color: var(--plum); text-decoration: none; }
+.man-indice button:hover { background: var(--sea-l); }
+.man-indice button.attivo { background: var(--sea); color: #fff; }
+.man-cap { font-size: 16px; line-height: 1.6; }
+.man-cap h2 { font-family: var(--serif); font-size: 24px; color: var(--plum); }
+.man-cap li { margin: 5px 0; }
+.man-passi { padding-left: 24px; }
+.man-passi li::marker { color: var(--sea); font-weight: 700; }
+.man-ui { font-weight: 600; color: var(--plum); background: var(--sea-l); border-radius: 5px; padding: 0 5px; white-space: normal; }
+.man-img { margin: 14px 0; }
+.man-img img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); }
+.man-img figcaption { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.man-faq { border-bottom: 1px solid var(--line2); padding: 8px 0; }
+.man-faq summary { cursor: pointer; font-weight: 600; color: var(--plum); }
+.man-faq p { margin: 8px 0 2px; }
+.man-glossario { margin: 0; }
+.man-voce { padding: 8px 0; border-bottom: 1px solid var(--line2); }
+.man-voce dt { font-weight: 700; color: var(--plum); }
+.man-voce dd { margin: 2px 0 0; }
+.man-naviga { margin-top: 18px; }
+@media (max-width: 980px) {
+  .man-griglia { grid-template-columns: minmax(0, 1fr); }
+  .man-indice { position: static; max-height: none; }
+  .man-corpo { order: -1; }
+}
+@media print { #side, .actions, button, .site-foot, #bgphoto, .hero, .man-indice, .man-strumenti, .man-aiuto { display: none !important; } main { padding: 0; } .man-griglia { display: block; } .man-cap { break-inside: auto; box-shadow: none; border: 0; } .man-img img { width: auto; max-width: 100%; max-height: 92mm; margin: 0 auto; } .man-img figcaption { text-align: center; } .man-cap h2 { break-after: avoid; } .man-img, .notice, .man-voce { break-inside: avoid; } .man-cap + .man-cap { break-before: page; } .man-ui, .notice, .man-passi li::marker { print-color-adjust: exact; -webkit-print-color-adjust: exact; } }
 @media (prefers-reduced-motion: reduce) { #bgphoto::after { transition: none; } }
 /* leggibilità sopra la foto della schermata di accesso */
 body.login .login-card p { color: #4a2a38; font-weight: 600; text-shadow: 0 1px 6px #fff, 0 0 2px #fff; }
